@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+    <hr>
+        <div class="col-lg-12 shadow rounded">
+            <h3>PROJECT RECORDS</h3>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<div class="container">
+
+    <nav class="nav-tabs rounded">
+        <a routerLink="/createproject" routerLinkActive="active">
+            <button class="m-1 btn btn-light btn-outline-primary" button>
+                Create Project</button>
+        </a>
+        <a routerLink="/viewproject" routerLinkActive="active">
+            <button class="m-1 btn btn-light btn-outline-primary" button>
+                View Project</button>
+        </a>
+    </nav>
+
+</div>
+
+<!-- <div class="navbar-nav">
+    <div class="nav-item">
+        <button class="m-1 btn btn-light btn-outline-primary" button lable="createproject">Create Project</button>
+    </div>
+
+    <div class="nav-item">
+        <button class="m-1 btn btn-light btn-outline-primary" button lable="createproject">Create Project</button>
+    </div>
+</div> -->
+
+<router-outlet></router-outlet>
+<!-- routed view goes here -->

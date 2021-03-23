@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "proid": "009",
+      "gfbf": "GF",
+      "servline": "Informatory Line",
+      "projectname": "Angular 8",
+      "eimid": "A1001",
+      "gsd": "Test",
+      "prowner": "ShaliniJ",
+      "id": 1
+    },
+    {
+      "proid": "001",
+      "gfbf": "GF",
+      "servline": "Informatory Line",
+      "projectname": "Angular 8",
+      "eimid": "A1001",
+      "gsd": "TestD",
+      "prowner": "Rohit",
+      "id": 2
+    },
+    {
+      "proid": "003",
+      "gfbf": "GF",
+      "servline": "Informatory Line",
+      "projectname": "CRUD",
+      "eimid": "A1002",
+      "gsd": "GSD1",
+      "prowner": "Ashwini",
+      "id": 3
+    },
+    {
+      "proid": "002",
+      "gfbf": "GF",
+      "servline": "Blanket Line",
+      "projectname": "Angular Application",
+      "eimid": "A1003",
+      "gsd": "Ang",
+      "prowner": "Shalini jaikumar",
+      "id": 4
+    },
+    {
+      "proid": "005",
+      "gfbf": "GF",
+      "servline": "Blanket Line",
+      "projectname": "CRUD",
+      "eimid": "G011",
+      "gsd": "GSD1",
+      "prowner": "Ashwini",
+      "id": 10
+    },
+    {
+      "proid": "P01",
+      "gfbf": "GF",
+      "servline": "Blanket Line",
+      "projectname": "FormEdut",
+      "eimid": "E11",
+      "gsd": "Ang01",
+      "prowner": "Pooja",
+      "id": 12
+    },
+    {
+      "proid": "012",
+      "gfbf": "GB",
+      "servline": "Blanket Line",
+      "projectname": "ProMan",
+      "eimid": "1234",
+      "gsd": "11UD",
+      "prowner": "Ravi",
+      "id": 13
+    }
+  ]
+}

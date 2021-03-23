@@ -1,0 +1,78 @@
+
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show shadow" role="alert" >
+    <strong>Success!</strong> Project updated successfully!
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<form class="form-group" [formGroup]="editProject" (ngSubmit)="updateProject()">
+    <div class="container">
+      <div class="row">
+    
+        
+        <div class="form-group col-md-3  bg-white rounded shadow py-4"> 
+                <span >GF/GB</span> <br>
+            <select class="form-control" formControlName="gfbf">
+                <option>Select GF/GB</option>
+                <option>GF</option>
+                <option>GB</option>            
+            </select>
+        </div>
+    
+        
+        <div class="form-group col-md-3 bg-white rounded shadow py-4"> 
+            <span>Service Line</span> <br>
+            <select  class="form-control" formControlName="servline">
+                <option>Select Service Line</option>
+                <option>Informatory Line</option>
+                <option>Blanket Line</option>            
+            </select>
+        </div>
+    
+        <div class="form-group col-md-3 bg-white rounded shadow py-4"> 
+            <span>Project Name<br></span> 
+            <input class="form-control" placeholder="Enter Project Name" formControlName="projectname" />
+        </div>
+    
+        <div class="col-md-3 form-group bg-white rounded shadow py-4"> 
+            <span>EIM Id</span> <br>
+            <input class="form-control" placeholder="Enter EIM ID" formControlName="eimid" >
+        </div>
+            
+        <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+            <span>GSD Group</span> 
+            <span style="display: inline-flex;">
+                    <input  class="form-control" placeholder="Enter GSD Group" formControlName="gsd"><button class="btn-basic">+</button></span>
+        </div>
+    
+        <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+            <span>Project Owner</span> <br>
+            <input class="form-control" placeholder="Enter Project Owner Name" formControlName="prowner">
+        </div>
+    
+        <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+            <span>Project ID</span> <br>
+            <input class="form-control" placeholder="Enter Project ID" formControlName="proid">
+        </div>
+    
+    </div>
+        
+        <div class="row col-lg-12"> <div class="col lg-6">&nbsp;</div>
+    
+          
+            <div class="col-lg-6" style="text-align: right;">
+                <span>&nbsp;</span>
+                <button type="submit" class="m-1 btn btn-md  btn-outline-primary shadow" button>Update</button>
+            </div>
+    
+        </div>
+    
+    </div>
+    </form>
+    
+    
+     
+    
+    

@@ -1,0 +1,39 @@
+th {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+tr {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+td { 
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+table {    
+    overflow-x: auto;   
+}
+
+.search-bar{
+    border:none;
+    margin-left: -12px;
+}
+
+
+.search-bar ::selection{
+    border:none;
+    border-collapse: collapse;
+    box-shadow: none;
+}
+
+

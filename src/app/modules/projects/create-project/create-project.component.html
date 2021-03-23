@@ -1,0 +1,97 @@
+<div *ngIf="alert" class="alert alert-primary alert-dismissible fade show shadow" role="alert" >
+    <strong>Success!</strong> Project Created successfully!
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+
+
+<form class="form-group" #projectForm="ngForm" (ngSubmit)="createProject(projects); " >
+<div class="container">
+  <div class="row">
+
+    <div class="form-group col-md-3  bg-white rounded shadow py-4" for="gfbf"> 
+            <span >GF/GB</span> <br>
+        <select  id="gfbf" required name="gfbf" [(ngModel)]="projects.gfbf" class="form-control">
+            <option [ngValue]="null" [selected]="true" selected>Select GF/GB</option>
+            <option>GF</option>
+            <option>GB</option>            
+        </select>
+    </div>
+
+    
+    <div class="form-group col-md-3 bg-white rounded shadow py-4" for="servline"> 
+        <span>Service Line</span> <br>
+        <select required  name="servline" id="servline" [(ngModel)]="projects.servline" class="form-control">
+            <option [ngValue]="null" [selected]="true">Select Service Line</option>
+            <option>Informatory Line</option>
+            <option>Blanket Line</option>            
+        </select>
+    </div>
+
+    <div class="form-group col-md-3 bg-white rounded shadow py-4" > 
+        <span>Project Name<br></span> 
+        <input required class="form-control" name="projectname" #projectname="ngModel" placeholder="Enter Project Name" [(ngModel)]="projects.projectname" [class.is-invalid]="projectname.invalid && projectname.touched" />
+        <span class="help-block" *ngIf="projectname.invalid && projectname.touched">
+            Project Name Required!
+        </span>
+    </div>
+
+    <div class="col-md-3 form-group bg-white rounded shadow py-4"> 
+        <span>EIM Id</span> <br>
+        <input required name="eimid" class="form-control" #eimid="ngModel" placeholder="Enter EIM ID" [(ngModel)]="projects.eimid" [class.is-invalid]="eimid.invalid && eimid.touched" />
+
+            <span class="help-block" *ngIf="eimid.invalid && eimid.touched">
+             EIM Id Required!
+            </span>
+    </div>
+        
+        <br/><br/>
+    <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+        <span>GSD Group</span> 
+        <span style="display: inline-flex;">
+                <input required name="gsd" class="form-control" placeholder="Enter GSD Group" [(ngModel)]="projects.gsd" #gsd="ngModel" [class.is-invalid]="gsd.invalid && gsd.touched"></span>
+
+                <span class="help-block" *ngIf="gsd.invalid && gsd.touched">
+                    GSD Group Required!
+                </span>
+    </div>
+            
+
+
+    <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+        <span>Project Owner</span> <br>
+        <input required class="form-control" name="prowner" placeholder="Enter Project Owner Name" [(ngModel)]="projects.prowner" #prowner="ngModel" [class.is-invalid]="prowner.invalid && prowner.touched" />
+    
+        <span class="help-block" *ngIf="prowner.invalid && prowner.touched">
+            Owner Name Required!
+        </span>
+    </div>
+        
+
+    <div class="col-md-3 form-group bg-white rounded shadow py-4"> <br>
+        <span>Project ID</span> <br>
+        <input class="form-control" name="proid" placeholder="Enter Project ID" [(ngModel)]="projects.proid">
+    </div>
+
+</div>
+    
+    <div class="row col-lg-12"> <div class="col lg-6">&nbsp;</div>
+
+      
+        <div class="col-lg-6" style="text-align: right;">
+            <button type="reset" class="m-1 btn btn-lg  btn-outline-dark shadow"  (click)="cancel(projectForm); ">Cancel</button>
+                <span>&nbsp;</span>
+            <button type="submit" class="m-1 btn btn-lg  btn-outline-danger shadow" button>Create</button>
+        </div>
+
+    </div>
+
+</div>
+</form>
+
+
+ 
+

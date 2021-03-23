@@ -1,0 +1,51 @@
+
+<div class="row" style="display:inline;"> 
+    <div class="col-md-4 rounded" style="margin-left: 59%; display:inline-flex; border-style: solid; border-color: gray; border-width: 1px;">
+        <input type="text" class="form-control search-bar" placeholder="Search by Project Name" name="Search" [(ngModel)]="searchTerm">
+        <button type="button" class="btn btn-basic" style="background-color:white"><i class="fa fa-search"></i></button>
+    </div>
+</div> <br><br>
+
+<div class="container">
+    <div>
+    <table id="Users" class="table bg-white rounded shadow py-4" style="border-color: black; border-style: solid;">
+    <th>ID </th>
+    <th> Project ID</th>
+    <th>GB/GF</th>
+    <th>Service Line</th>
+    <th>Project Name</th>
+    <th>EIM ID</th>
+    <th>GSD Group</th>
+    <th>Project Owner</th>
+    <th> Action</th>
+        
+    <tr *ngFor= "let project of allProject | projectFilter:searchTerm | paginate: {itemsPerPage:5, currentPage:p};">
+        <td>{{project.id}}</td>
+        <td>{{project.proid}}</td>
+        <td>{{project.gfbf}}</td>
+        <td>{{project.servline}}</td>
+        <td>{{project.projectname}}</td>
+        <td>{{project.eimid}}</td>
+        <td>{{project.gsd}}</td>
+        <td>{{project.prowner}}</td>
+
+
+        <td>
+            <a class="btn" routerLink="/edit/{{project.id}}">
+                <i class="fa fa-edit"></i>
+            </a> 
+
+                       
+            <a class="btn" (click)="deleteProject(project)">  
+                <i class="fa fa-trash"></i>
+            </a>
+        </td>  
+    </tr> 
+
+    
+</table>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+
+
