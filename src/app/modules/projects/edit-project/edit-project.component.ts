@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Project } from 'src/app/model/project.model';
 import { RestService } from 'src/app/modules/shared/rest.service'; 
-
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-project',
@@ -50,11 +50,19 @@ export class EditProjectComponent implements OnInit {
   updateProject(){
     this.restService.updateProject(this.router.snapshot.params.id,this.editProject.value).subscribe((result)=>{
       console.log(result,"Data updated successfully!")
-      this.alert=true;
+      //this.alert=true;
+      Swal.fire({
+        title: 'Project updated successfully!',
+        icon: 'success',
+        //showCancelButton: true,
+        confirmButtonText: 'Ok',
+        
+      })
     })
   }
   closeAlert(){
-    this.alert=false;
+    //this.alert=false;  
+    
   }
 
 }

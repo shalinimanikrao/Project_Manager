@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 import { Project } from 'src/app/model/project.model';
 import { RestService } from '../../shared/rest.service';
+import Swal from 'sweetalert2';
 
 
 
@@ -50,7 +51,16 @@ export class CreateProjectComponent implements OnInit {
      console.log(formObj)
      this.restService.createProject(formObj).subscribe((response)=> {
           this.getLatestProject();
-          this.alert=true;
+          //this.alert=true;
+
+          Swal.fire({
+            title: 'Project created successfully!',
+            icon: 'success',
+            //showCancelButton: true,
+            confirmButtonText: 'Ok',
+            
+          })
+          
        });    
     }
         
@@ -58,9 +68,16 @@ export class CreateProjectComponent implements OnInit {
       this.restService.getAllProject()
     }
 
-    closeAlert(){
-      this.alert=false;
-    }
+    // closeAlert(){
+    //   //this.alert=false;
+    //   Swal.fire({
+    //     title: 'Project created successful!',
+    //     icon: 'success',
+    //     //showCancelButton: false,
+    //     confirmButtonText: 'Ok',        
+    //   })
+        
+    // }
    
   }
 

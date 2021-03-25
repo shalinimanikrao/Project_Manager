@@ -1,15 +1,12 @@
-.row {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 3%;
+
+.container {
+    position:relative;
 }
 
-.alert {
-    width:400px; 
-    height: 60px; 
-    font-size: large; 
-    text-align: center; 
-    margin-left: 10%;    
-    }
+.row {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
 
 select {
     margin: auto;
@@ -19,7 +16,7 @@ select {
     border-radius: 3px;
 }
 
-input {
+input {    
     margin: auto;
     color: black;
     padding: 5px;
@@ -61,3 +58,5 @@ span{
     font-weight: lighter;
     font-size:smaller;
 }
+
+

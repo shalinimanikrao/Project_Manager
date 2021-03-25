@@ -1,3 +1,8 @@
+
+.container{
+    position: relative;
+}
+
 .row {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 3%;
@@ -42,14 +47,6 @@ span{
         
 }
 
-.alert {
-    width:400px; 
-    height: 60px; 
-    font-size: large; 
-    text-align: center; 
-    margin-left: 10%;
-    
-    }
 
 
 
